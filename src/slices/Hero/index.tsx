@@ -20,7 +20,7 @@ const components: JSXMapSerializer = {
     </Heading>
   ),
   paragraph: ({ children }) => (
-    <p className="text-lg font-body text-center leading-10 font-normal text-slate-500 mb-4 max-w-md md:text-2xl">
+    <p className="text-lg font-display text-center leading-10 font-normal text-slate-500 mb-4 max-w-md md:text-2xl">
       {children}
     </p>
   ),
@@ -51,11 +51,11 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           <Button field={slice.primary.button_link} className="mb-8 md:mb-10">
             <>{slice.primary.button_text}</>
           </Button>
+          <PrismicNextImage
+            field={slice.primary.image}
+            className="drop-shadow-xl max-w-4xl w-full"
+          />
         </div>
-        <PrismicNextImage
-          field={slice.primary.image}
-          className="drop-shadow-xl max-w-4xl w-full"
-        />
       </div>
     </Bounded>
   );
